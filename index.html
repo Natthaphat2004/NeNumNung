@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำหนัง - Movie Recommender</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script defer src="auth.js"></script>
+</head>
+<body>
+
+    <header>
+		<a href="index.html" class="logo-button">
+		🎬 <span class="custom-name">MovieCentral</span>
+		</a>
+        <input type="text" id="search" placeholder="ค้นหาหนัง...">
+        <a href="categories.html" class="category-link">📂 หมวดหมู่</a>
+
+        <span id="user-info"></span>
+
+        <a href="login.html" id="login-btn" class="login-btn">🔑 เข้าสู่ระบบ</a>
+        <button id="logout-btn" onclick="logout()" class="logout-btn">🚪 ออกจากระบบ</button>
+    </header>
+
+    <div class="movie-container" id="movieList">
+    </div>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <iframe id="modalTrailer" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
